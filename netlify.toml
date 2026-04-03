@@ -1,0 +1,24 @@
+[[redirects]]
+  from = "/"
+  to = "/index"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact"
+  status = 200
+
+[[headers]]
+  for = "/index"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+
+[[headers]]
+  for = "/contact"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+
+[[headers]]
+  for = "/work"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"

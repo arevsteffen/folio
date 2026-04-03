@@ -194,6 +194,25 @@
   "knowsAbout": ["Product Design", "UX Design", "Design Leadership", "Enterprise Software", "Startups"]
 }
 </script>
+
+<style id="skills-overrides">
+/* Neutralize Framer hover variants on skills items */
+.framer-032Ue.framer-v-x3qdnr.framer-g2q9aj { width: 100% !important; }
+.framer-032Ue.framer-v-x3qdnr .framer-107pdi9 { gap: 200px !important; }
+.framer-evObk.framer-v-1l2jgsa.framer-5wkc61 { padding: 0 24px !important; }
+[data-framer-cursor] { cursor: default !important; }
+
+/* Scroll-in animation initial state */
+.skill-item-appear {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.16,1,0.3,1), transform 0.65s cubic-bezier(0.16,1,0.3,1);
+}
+.skill-item-appear.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
 </head>
 <body>
 	
@@ -1037,6 +1056,45 @@
     observer.observe(document.documentElement, { childList: true, subtree: true });
     setTimeout(function () { observer.disconnect(); }, 10000);
   })();
+</script>
+
+<script>
+(function () {
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      var items = entry.target.querySelectorAll('.framer-032Ue.framer-g2q9aj');
+      items.forEach(function (item, i) {
+        setTimeout(function () {
+          item.classList.add('in-view');
+        }, i * 130);
+      });
+      io.unobserve(entry.target);
+    });
+  }, { threshold: 0.15 });
+
+  function init() {
+    document.querySelectorAll('.framer-evObk').forEach(function (container) {
+      container.querySelectorAll('.framer-032Ue.framer-g2q9aj').forEach(function (item) {
+        item.classList.add('skill-item-appear');
+      });
+      io.observe(container);
+    });
+  }
+
+  // Wait for Framer hydration then init, don't re-run
+  var done = false;
+  var mo = new MutationObserver(function () {
+    if (done) return;
+    if (document.querySelector('.framer-evObk .framer-032Ue.framer-g2q9aj')) {
+      done = true;
+      mo.disconnect();
+      init();
+    }
+  });
+  mo.observe(document.documentElement, { childList: true, subtree: true });
+  setTimeout(function () { mo.disconnect(); }, 8000);
+})();
 </script>
 </body>
 </html>
