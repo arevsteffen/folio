@@ -2,3 +2,18 @@
   from = "/contact"
   to = "/contact.html"
   status = 200
+
+[[redirects]]
+  from = "/blog"
+  to = "/blog.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/the-case-for-slower-design"
+  to = "/posts/the-case-for-slower-design.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/leading-design-without-a-title"
+  to = "/posts/leading-design-without-a-title.html"
+  status = 200

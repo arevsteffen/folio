@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leading Design Without a Title — Arev Steffen</title>
+  <link href="../images/ginhehj8fj0qa7n0xya7x6rxle-1.png" rel="icon">
+  <style>
+    @font-face { font-family: "Switzer"; src: url("../images/6in5wolrcyp4g4mocohomxnon6q7mdar.woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+    @font-face { font-family: "Switzer"; src: url("../images/y7scnzjot2mw5adsgofldgh4tnl4jcqy.woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+    @font-face { font-family: "Switzer"; src: url("../images/ys3vpnvo4b3tojmexdgfzq4tlzggsrzc.woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0a;
+      --fg: #ffffff;
+      --muted: #999;
+      --border: rgba(187,187,187,0.2);
+    }
+
+    html { background: var(--bg); color: var(--fg); font-family: "Switzer", sans-serif; -webkit-font-smoothing: antialiased; }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo img { width: 52px; height: 52px; display: block; transform: rotate(180deg); }
+
+    .nav-links { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+    .nav-links span { font-size: 13px; font-weight: 600; color: var(--fg); }
+    .nav-links a { font-size: 13px; color: var(--muted); text-decoration: none; }
+    .nav-links a:hover { color: var(--fg); }
+
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 120px 24px 80px;
+    }
+
+    .back-link {
+      display: inline-block;
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      margin-bottom: 32px;
+    }
+    .back-link:hover { color: var(--fg); }
+
+    .post-date { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+
+    h1 {
+      margin-top: 12px;
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 700;
+      letter-spacing: -1px;
+      line-height: 1.1;
+    }
+
+    .cover {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+      margin-bottom: 48px;
+    }
+
+    .post-body { font-size: 17px; line-height: 1.7; color: #ddd; }
+    .post-body p + p { margin-top: 24px; }
+    .post-body h2 { margin-top: 40px; margin-bottom: 16px; font-size: 22px; font-weight: 600; color: var(--fg); letter-spacing: -0.3px; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 80px;
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--fg); }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #050509; }
+    ::-webkit-scrollbar-thumb { background: #2b2b33; border-radius: 999px; }
+    * { scrollbar-width: thin; scrollbar-color: #2b2b33 #050509; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="../">
+      <img src="../images/y8wt8pzsd6smdljficjojqmboi.png" alt="Arev Steffen">
+    </a>
+    <div class="nav-links">
+      <span>Quick Links</span>
+      <div><a href="../">Home</a>, <a href="../blog">Blog</a></div>
+    </div>
+  </nav>
+
+  <main>
+    <a class="back-link" href="../blog">← Writing</a>
+
+    <div class="post-header" style="margin-bottom:48px">
+      <p class="post-date">March 2026</p>
+      <h1>Leading Design Without a Title</h1>
+    </div>
+
+    <img class="cover" src="../images/p3q232aq6aosmmfiqyofmipjzr8.png" alt="Leading Design Without a Title">
+
+    <div class="post-body">
+      <p>Most design leadership conversations start with the org chart. Who reports to whom, what level you're at, whether you have a seat at the table. These things matter — but they're downstream of something more fundamental: whether people actually trust your judgment.</p>
+
+      <p>I've worked with senior designers who had every formal authority and couldn't move a product decision. I've worked with ICs with no direct reports who shaped entire product directions. The difference wasn't the title. It was how they showed up in rooms.</p>
+
+      <h2>Influence before authority</h2>
+
+      <p>The designers who lead effectively — with or without a formal leadership role — tend to share a few habits. They make their thinking legible. They don't just show work; they show why. They frame problems before proposing solutions. They ask the question no one else is asking, and they ask it early.</p>
+
+      <p>This kind of influence is slower to build than positional authority. It requires consistency over time — being the person who follows through, who does the unglamorous research, who synthesizes feedback without getting defensive. But it also compounds in ways that titles don't.</p>
+
+      <h2>Craft as credibility</h2>
+
+      <p>There's a version of design leadership that drifts entirely into strategy and facilitation — away from the actual pixels and flows. Sometimes that's right. But I've found that maintaining a connection to the craft, even at a senior level, keeps you credible in a particular way that nothing else does.</p>
+
+      <p>When you can sit down and show the work — not just talk about it — people take your opinions on process and direction more seriously. Craft isn't separate from leadership. For designers, it's the foundation of it.</p>
+    </div>
+  </main>
+
+  <footer>
+    <a href="../">Arev Steffen</a> &nbsp;·&nbsp; <a href="../blog">Writing</a> &nbsp;·&nbsp; <a href="../contact">Contact</a>
+  </footer>
+
+</body>
+</html>
