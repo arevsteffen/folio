@@ -173,12 +173,7 @@
 }
 /* Mobile: relative, 70% wide, right-aligned */
 @media (max-width: 809.98px) {
-  .framer-fCKsL .framer-y412cc {
-    width: 70% !important;
-    align-self: flex-end !important;
-    margin-left: auto !important;
-    margin-right: 0 !important;
-  }
+  .framer-fCKsL .framer-y412cc { width: 100% !important; position: relative !important; left: unset !important; right: unset !important; }
 }
 </style>
 <script type="application/ld+json">
@@ -196,11 +191,27 @@
 </script>
 
 <style id="skills-overrides">
+/* Mobile: fix skills layout */
+@media (max-width: 809.98px) {
+  .framer-032Ue .framer-107pdi9,
+  .framer-032Ue.framer-v-x3qdnr .framer-107pdi9,
+  .framer-032Ue.framer-v-tnd4c0 .framer-107pdi9 { gap: 16px !important; }
+  .framer-032Ue .framer-l6wrfx { gap: 8px !important; overflow: visible !important; place-content: flex-start !important; align-items: flex-start !important; }
+  .framer-032Ue .framer-77ym80 {
+    white-space: nowrap !important;
+    word-break: normal !important;
+    overflow: visible !important;
+    flex: none !important;
+    width: auto !important;
+  }
+  .framer-032Ue .framer-gz3nsm { text-wrap: pretty; }
+}
+
 /* Neutralize Framer hover variants on skills items */
 .framer-032Ue.framer-v-x3qdnr.framer-g2q9aj { width: 100% !important; }
 .framer-032Ue.framer-v-tnd4c0.framer-g2q9aj { width: 100% !important; padding: unset !important; }
-.framer-032Ue.framer-v-tnd4c0 .framer-107pdi9 { order: unset !important; gap: 200px !important; }
-.framer-032Ue.framer-v-x3qdnr .framer-107pdi9 { gap: 200px !important; }
+@media (min-width: 810px) { .framer-032Ue.framer-v-tnd4c0 .framer-107pdi9 { order: unset !important; gap: 200px !important; } }
+@media (min-width: 810px) { .framer-032Ue.framer-v-x3qdnr .framer-107pdi9 { gap: 200px !important; } }
 .framer-evObk.framer-v-1l2jgsa.framer-5wkc61 { padding: 0 24px !important; }
 [data-framer-cursor] { cursor: default !important; }
 
@@ -1096,6 +1107,31 @@
   });
   mo.observe(document.documentElement, { childList: true, subtree: true });
   setTimeout(function () { mo.disconnect(); }, 8000);
+})();
+</script>
+
+
+<script>
+(function () {
+  function removeCursors() {
+    document.querySelectorAll('[data-framer-cursor]').forEach(function (el) {
+      el.removeAttribute('data-framer-cursor');
+    });
+    // Also hide the cursor host element Framer renders
+    var host = document.getElementById('__framer-cursor-host') || document.querySelector('[data-framer-cursor-host]');
+    if (host) host.style.display = 'none';
+  }
+  var done = false;
+  var mo = new MutationObserver(function () {
+    if (done) return;
+    if (document.querySelector('[data-framer-cursor]')) {
+      done = true;
+      mo.disconnect();
+      removeCursors();
+    }
+  });
+  mo.observe(document.documentElement, { childList: true, subtree: true });
+  setTimeout(function () { mo.disconnect(); removeCursors(); }, 5000);
 })();
 </script>
 </body>
