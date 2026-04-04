@@ -61,12 +61,12 @@
     
     <meta property="og:title" content="Arev Steffen - Lead Product Designer Portfolio">
     <meta property="og:description" content="Arev is a lead product designer based in Portugal, with experience in enterprise and startups. With over ten years of experience, he's lead design teams in different industries and stages. He's also does freelance projects with websites and brands.">
-    <meta property="og:image" content="images/t1etv4tz3vwnvnijhawevw0o.png">
+    <meta property="og:image" content="https://arevsteffen.com/images/opengraph.jpg">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Arev Steffen - Lead Product Designer Portfolio">
     <meta name="twitter:description" content="Arev is a lead product designer based in Portugal, with experience in enterprise and startups. With over ten years of experience, he's lead design teams in different industries and stages. He's also does freelance projects with websites and brands.">
-    <meta name="twitter:image" content="images/t1etv4tz3vwnvnijhawevw0o.png">
+    <meta name="twitter:image" content="https://arevsteffen.com/images/opengraph.jpg">
 	
 	<style data-framer-font-css>@font-face { font-family: "Suisse Int'l Semibold"; src: url("images/2yla0cay9igddurwwi2gr4l3wi.woff2"); font-display: swap; font-style: normal; font-weight: 600 }
 @font-face { font-family: "Suisse Int'l Regular"; src: url("images/asv9et0ieem6ynchnrrx6ulzy.woff2"); font-display: swap; font-style: normal; font-weight: 400 }
