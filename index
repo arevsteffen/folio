@@ -175,6 +175,20 @@
 @media (max-width: 809.98px) {
   .framer-fCKsL .framer-y412cc { width: 100% !important; position: relative !important; left: unset !important; right: unset !important; }
 }
+/* Mobile: hero fills one viewport, title anchored to bottom */
+@media (max-width: 809.98px) {
+  .framer-fCKsL .framer-dhlfab {
+    height: 100vh !important;
+    height: 100svh !important;
+  }
+  .framer-fCKsL .framer-1jn9ae6 {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+  }
+}
 </style>
 <script type="application/ld+json">
 {
