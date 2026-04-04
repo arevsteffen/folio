@@ -180,7 +180,10 @@
   .framer-fCKsL .framer-dhlfab {
     height: 100vh !important;
     height: 100svh !important;
+    place-content: flex-start !important;
+    padding-top: 20px !important;
   }
+  .framer-fCKsL .framer-ajhxcq { height: 240px !important; }
   .framer-fCKsL .framer-1jn9ae6 {
     position: absolute !important;
     bottom: 0 !important;
