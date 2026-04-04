@@ -1134,22 +1134,5 @@
   setTimeout(function () { mo.disconnect(); removeCursors(); }, 5000);
 })();
 </script>
-<script>
-// On mobile, hide the large decorative "Arev Steffen" title during page load
-// so it doesn't flash at the bottom of the screen before the page is ready
-(function () {
-  if (window.innerWidth > 809) return;
-  var style = document.createElement('style');
-  style.id = 'hide-title-load';
-  style.textContent = '.framer-fCKsL .framer-2xxdw2 { opacity: 0 !important; visibility: hidden !important; }';
-  document.head.appendChild(style);
-  window.addEventListener('load', function () {
-    setTimeout(function () {
-      var s = document.getElementById('hide-title-load');
-      if (s) s.parentNode.removeChild(s);
-    }, 800);
-  });
-})();
-</script>
 </body>
 </html>
